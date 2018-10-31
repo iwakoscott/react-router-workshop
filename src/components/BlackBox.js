@@ -10,7 +10,7 @@ import React from "react";
   }
 */
 
-export default class Helper extends React.Component {
+export default class BlackBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

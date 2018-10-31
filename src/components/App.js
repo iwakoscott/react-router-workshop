@@ -1,9 +1,9 @@
 import React from "react";
-import Helper from "./Helper";
+import BlackBox from "./BlackBox";
 
 function App(props) {
   return (
-    <Helper>
+    <BlackBox>
       {({ ideas, handleAddIdea, handleVote }) => {
         return (
           <div>
@@ -11,7 +11,7 @@ function App(props) {
           </div>
         );
       }}
-    </Helper>
+    </BlackBox>
   );
 }
 
