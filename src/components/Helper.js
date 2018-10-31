@@ -14,7 +14,7 @@ export default class Helper extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      ideas: [{ id: 1, title: "Pineapple Apple", likes: 10, author: "" }]
+      ideas: []
     };
   }
 
