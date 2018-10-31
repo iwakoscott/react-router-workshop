@@ -7,7 +7,7 @@ function App(props) {
       {({ ideas, handleAddIdea, handleVote }) => {
         return (
           <div>
-            <h1>Welcome, to the React Router Workshop! 🚀</h1>
+            <h1>Welcome, to the React Router Workshop! ✨</h1>
           </div>
         );
       }}
