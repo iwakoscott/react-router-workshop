@@ -4,11 +4,11 @@ html {
   text-align: center;
 }
 
-ul {
+.navbar {
   list-style-type: none;
 }
 
-li {
+.navbar > li {
   display: inline;
   margin: 0 1em;
 }
