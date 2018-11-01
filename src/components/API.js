@@ -10,14 +10,14 @@ import React from "react";
   }
 */
 
-export default class BlackBox extends React.Component {
+export default class API extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       ideas: []
     };
   }
-
+  getIdeas = () => this.state.ideas;
   getIdea = id => this.state.ideas.find(idea => idea.id === id);
   handleAddIdea = idea =>
     this.setState(({ ideas }) => ({ ideas: ideas.concat([idea]) }));
@@ -37,12 +37,10 @@ export default class BlackBox extends React.Component {
 
   getProps() {
     return {
-      ideas: this.state.ideas,
-      callbacks: {
-        handleAddIdea: this.handleAddIdea,
-        handleVote: this.handleVote,
-        getIdea: this.getIdea
-      }
+      getIdeas: this.getIdeas,
+      handleAddIdea: this.handleAddIdea,
+      handleVote: this.handleVote,
+      getIdea: this.getIdea
     };
   }
 
