@@ -4,7 +4,7 @@ import BlackBox from "./BlackBox";
 function App(props) {
   return (
     <BlackBox>
-      {({ ideas, handleAddIdea, handleVote }) => {
+      {({ ideas, callbacks }) => {
         return (
           <div>
             <h1>Welcome, to the React Router Workshop! ✨</h1>
