@@ -18,6 +18,8 @@ export default class BlackBox extends React.Component {
     };
   }
 
+  getIdea = id => this.state.ideas.find(idea => idea.id === id);
+
   handleAddIdea = idea =>
     this.setState(({ ideas }) => ({ ideas: ideas.concat([idea]) }));
 
@@ -38,7 +40,8 @@ export default class BlackBox extends React.Component {
     return {
       ideas: this.state.ideas,
       handleAddIdea: this.handleAddIdea,
-      handleVote: this.handleVote
+      handleVote: this.handleVote,
+      getIdea: this.getIdea
     };
   }
 
