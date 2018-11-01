@@ -1,4 +1,14 @@
 body,
 html {
   font-family: sans-serif;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+  margin: 0 1em;
 }
