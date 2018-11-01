@@ -12,3 +12,8 @@ html {
   display: inline;
   margin: 0 1em;
 }
+
+.activeStyle {
+  color: red;
+  font-size: 1.1em;
+}
