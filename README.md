@@ -8,7 +8,7 @@ Follow me on Twitter [@theisomorphic](https://twitter.com/theisomorphic)
 
 ---
 
-### Step 00. Setting up our Router and Components to render!
+### ✅ Step 00. Setting up our Router and Components to render!
 
 #### LEARNING GOALS 🥅
 
@@ -44,6 +44,5 @@ Learn about `react-router-dom`'s
 
 1. Refactor `Add` component to include a `form` to add new ideas.
 2. Build out a helper function to handle `form` submissions.
-3. Pass the `handleAddIdea` API to the `Add` component using the `render` prop to be used as a callback function to be called inside of the `onSubmit` handler for the `form`.
-4. Find a way to send the user to `/` i.e. the homepage after the user submits the `form`.
-5. Refactor the `Home` component to show the ideas as an ordered list of `Link` components that take the user to the idea's voting page.
+3. Pass the API method - `handleAddIdea` to the `Add` component using the `render` prop, and invoke it inside the `form`'s `onSubmit` handler.
+4. Refactor the `Home` component to show the ideas as an ordered list of `Link` components that take the user to the idea's voting page.
