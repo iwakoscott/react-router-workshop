@@ -1,5 +1,5 @@
-import React from "react";
-
+import React from 'react';
+import { formatIdea } from '../utils';
 /*
   Idea Schema:
   {
@@ -19,8 +19,11 @@ export default class API extends React.Component {
   }
   getIdeas = () => this.state.ideas;
   getIdea = id => this.state.ideas.find(idea => idea.id === id);
-  handleAddIdea = idea =>
+  handleAddIdea = (title, author = '') => {
+    const idea = formatIdea(title, author);
     this.setState(({ ideas }) => ({ ideas: ideas.concat([idea]) }));
+    return idea;
+  };
 
   handleVote = id => sign => () =>
     this.setState(({ ideas }) => ({
@@ -29,7 +32,7 @@ export default class API extends React.Component {
           idea.id === id
             ? {
                 ...idea,
-                likes: sign === "+" ? idea.likes + 1 : idea.likes - 1
+                likes: sign === '+' ? idea.likes + 1 : idea.likes - 1
               }
             : idea
       )
