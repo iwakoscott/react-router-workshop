@@ -20,6 +20,7 @@ Learn about `react-router-dom`'s
 - [ ] `Route`
 - [ ] `Link`
 - [ ] `Switch`
+- [ ] `location` object
 
 ### Instructions
 
