@@ -1,36 +1,77 @@
 import React from 'react';
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 
-function Home(props){
-  return <h1>Home</h1>
+function Home(props) {
+  const ideas = props.ideas;
+  return (
+    <div>
+      <h1>The Jam Idea App! {'🐻'}</h1>
+      <section>
+        {ideas.length > 0 ? (
+          <ol>
+            {props.ideas.map(idea => (
+              <li key={idea.id}>
+                <Link to={'/jams/' + idea.id}>{idea.title}</Link>
+              </li>
+            ))}
+          </ol>
+        ) : (
+          'Looks like no ideas have been added!'
+        )}
+      </section>
+    </div>
+  );
 }
 
-function Add(props){
-  return <h1>Add a Recipe Idea</h1>
+function Add(props) {
+  const handleSubmit = event => {
+    event.preventDefault();
+    const input = event.target.elements[0];
+    const title = input.value;
+    props.handleAddIdea(title);
+    input.value = '';
+    props.history.push('/');
+  };
+  return (
+    <div>
+      <h1>Add a Recipe Idea</h1>
+      <form onSubmit={handleSubmit}>
+        <input type="text" />
+        <button>SUBMIT</button>
+      </form>
+    </div>
+  );
 }
 
-function Error(props){
+function Error(props) {
   return (
     <div>
       <h1>404 Error: Page Not Found</h1>
-      <p>It looks like <code>{props.location.pathname}</code> doesn't exist!</p>
+      <p>
+        It looks like <code>{props.location.pathname}</code> doesn't exist!
+      </p>
       <Link to="/">Take me back to safety!</Link>
     </div>
   );
 }
 
-function NavBar(props){
+function NavBar(props) {
   return (
-   <nav>
-     <ul className="navbar">
-       <li><Link to="/">Home</Link></li>
-       <li><Link to="/add">Add</Link></li>
-     </ul>
-   </nav>
+    <nav>
+      <ul className="navbar">
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/add">Add</Link>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
-function App(props) {
+function App({ handleAddIdea, getIdeas }) {
+  console.log(getIdeas());
   return (
     <div>
       <BrowserRouter>
@@ -38,9 +79,16 @@ function App(props) {
           <NavBar />
           <hr />
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/add" component={Add} />
-            <Route component={Error}/>
+            <Route
+              exact
+              path="/"
+              render={props => <Home ideas={getIdeas()} {...props} />}
+            />
+            <Route
+              path="/add"
+              render={props => <Add handleAddIdea={handleAddIdea} {...props} />}
+            />
+            <Route component={Error} />
           </Switch>
         </div>
       </BrowserRouter>

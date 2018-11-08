@@ -37,13 +37,13 @@ Learn about `react-router-dom`'s
 
 #### LEARNING GOALS 🥅
 
-- [ ] Learn about the `render` prop pattern to add more control of what `Route` is rendering.
-- [ ] Learn about the `.push` method on the `history` object.
+- [x] Learn about the `render` prop pattern to add more control of what `Route` is rendering.
+- [x] Learn about the `.push` method on the `history` object.
 
 ### Instructions
 
 1. Refactor `Add` component to include a `form` to add new ideas.
 2. Build out a helper function to handle `form` submissions.
-3. Pass the `handleAddIdea` API to the `Add` component using the `render` prop to be used as a callback function to be called inside of the `onSubmit` handler for the `form`.
+3. Pass the API's `handleAddIdea` method to the `Add` component using the `render` prop, to be used as a callback function invoked from the `onSubmit` handler for the `form`.
 4. Find a way to send the user to `/` i.e. the homepage after the user submits the `form`.
-5. Refactor the `Home` component to show the ideas as an ordered list of `Link` components that take the user to the idea's voting page.
+5. Refactor the `Home` component to show the ideas as an ordered list of `Link`s that take the user to the idea's voting page. Add a ternary expression to show a message if no ideas have been added.
