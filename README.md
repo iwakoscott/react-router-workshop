@@ -50,12 +50,12 @@ Learn about `react-router-dom`'s
 
 ---
 
-### Step 02. Add a Jam Idea Voting Page 🎟
+### ✅ Step 02. Add a Jam Idea Voting Page 🎟
 
 #### LEARNING GOALS 🥅
 
-- [ ] Learn about how to add URL parameters.
-- [ ] Learn about the `match` object.
+- [x] Learn about how to add URL parameters.
+- [x] Learn about the `match` object.
 
 ### Instructions
 
