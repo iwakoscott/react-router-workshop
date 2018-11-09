@@ -1,7 +1,7 @@
 import uuidv4 from 'uuid/v4';
 
 function getID() {
-  return uuidv4().replace(/\-/g, '');
+  return uuidv4().replace(/-/g, '');
 }
 
 export function formatIdea(title, author) {
