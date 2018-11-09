@@ -66,11 +66,11 @@ Learn about `react-router-dom`'s
 
 ---
 
-### Step 03. Polish up the Application 💅
+### ✅ Step 03. Polish up the Application 💅
 
 #### LEARNING GOALS 🥅
 
-- [ ] Learn about the `NavLink` component.
+- [x] Learn about the `NavLink` component.
 
 ### Instructions
 
