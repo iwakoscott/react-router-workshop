@@ -9,7 +9,7 @@ function Home(props) {
       <section>
         {ideas.length > 0 ? (
           <ol>
-            {props.ideas.map(idea => (
+            {ideas.map(idea => (
               <li key={idea.id}>
                 <Link to={'/jams/' + idea.id}>{idea.title}</Link>
               </li>
