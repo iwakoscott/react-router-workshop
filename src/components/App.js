@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Link, Switch, Redirect } from 'react-router-dom';
 
 function Home(props) {
   const ideas = props.ideas;
@@ -70,8 +70,35 @@ function NavBar(props) {
   );
 }
 
-function App({ handleAddIdea, getIdeas }) {
-  console.log(getIdeas());
+function Vote(props) {
+  const id = props.match.params.id;
+  const idea = props.getIdea(id);
+
+  if (typeof idea === 'undefined') {
+    return (
+      <div>
+        <h1>Looks like this idea isn't in our Database!</h1>
+        <Link to="/add">How about adding one?</Link>
+      </div>
+    );
+  }
+
+  const vote = props.handleVote(id);
+
+  return (
+    <div>
+      <h1>{idea.title}</h1>
+      <h3>{idea.likes}</h3>
+      <section>
+        <button onClick={vote('+')}>{'👍'}</button>
+        <button onClick={vote('-')}>{'👎'}</button>
+      </section>
+    </div>
+  );
+}
+
+function App({ handleAddIdea, getIdeas, getIdea, handleVote }) {
+  // console.log(getIdeas());
   return (
     <div>
       <BrowserRouter>
@@ -87,6 +114,12 @@ function App({ handleAddIdea, getIdeas }) {
             <Route
               path="/add"
               render={props => <Add handleAddIdea={handleAddIdea} {...props} />}
+            />
+            <Route
+              path="/jams/:id"
+              render={props => (
+                <Vote handleVote={handleVote} getIdea={getIdea} {...props} />
+              )}
             />
             <Route component={Error} />
           </Switch>
