@@ -14,11 +14,21 @@ export default class API extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      ideas: []
+      ideas: [],
+      authedUser: null
     };
   }
+
+  setAuthUser = authedUser => this.setState({ authedUser });
+
+  unsetAuthUser = () => this.setState({ authedUser: null });
+
+  getAuthUser = () => this.state.authedUser;
+
   getIdeas = () => this.state.ideas;
+
   getIdea = id => this.state.ideas.find(idea => idea.id === id);
+
   handleAddIdea = (title, author = '') => {
     const idea = formatIdea(title, author);
     this.setState(({ ideas }) => ({ ideas: ideas.concat([idea]) }));
@@ -43,7 +53,12 @@ export default class API extends React.Component {
       getIdeas: this.getIdeas,
       handleAddIdea: this.handleAddIdea,
       handleVote: this.handleVote,
-      getIdea: this.getIdea
+      getIdea: this.getIdea,
+      auth: {
+        setAuthUser: this.setAuthUser,
+        unsetAuthUser: this.unsetAuthUser,
+        getAuthUser: this.getAuthUser
+      }
     };
   }
 
