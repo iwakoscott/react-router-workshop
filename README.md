@@ -47,3 +47,19 @@ Learn about `react-router-dom`'s
 3. Pass the API method - `handleAddIdea` to the `Add` component using the `render` prop, and invoke it inside the form's `onSubmit` handler.
 4. Find a way to send the user to `/` i.e. the homepage after the user submits the `form`.
 5. Refactor the `Home` component to show the ideas as an ordered list of `Link`s that take the user to the idea's voting page. Add a ternary expression to show a message if no ideas have been added.
+
+---
+
+### Step 02. Add a Jam Idea Voting Page 🎟
+
+#### LEARNING GOALS 🥅
+
+- [ ] Learn about how to add URL parameters.
+- [ ] Learn about the `match` object.
+
+### Instructions
+
+1. Add a new `Route` to catch the `/jams/<unique-id>`.
+2. Build out the `Vote` component to be rendered at `/jams/<unique-id>`.
+3. Use the `getIdea` and `handleVote` API methods to render the idea's `likes` and `title` data, and add the `button` click behavior, respectively.
+4. Add a conditional to catch ideas `id`'s that are not in our backend.
