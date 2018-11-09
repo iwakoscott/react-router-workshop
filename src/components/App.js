@@ -1,15 +1,16 @@
 import React from 'react';
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Link, Switch, NavLink } from 'react-router-dom';
 
 function Home(props) {
   const ideas = props.ideas;
+  const byLikes = (a, b) => b.likes - a.likes;
   return (
     <div>
       <h1>The Jam Idea App! {'🐻'}</h1>
       <section>
         {ideas.length > 0 ? (
           <ol>
-            {ideas.map(idea => (
+            {ideas.sort(byLikes).map(idea => (
               <li key={idea.id}>
                 <Link to={'/jams/' + idea.id}>{idea.title}</Link>
               </li>
@@ -60,10 +61,14 @@ function NavBar(props) {
     <nav>
       <ul className="navbar">
         <li>
-          <Link to="/">Home</Link>
+          <NavLink exact activeClassName="activeStyle" to="/">
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/add">Add</Link>
+          <NavLink activeClassName="activeStyle" to="/add">
+            Add
+          </NavLink>
         </li>
       </ul>
     </nav>
@@ -88,7 +93,9 @@ function Vote(props) {
   return (
     <div>
       <h1>{idea.title}</h1>
-      <h3>{idea.likes}</h3>
+      <h3>
+        {idea.likes} {idea.likes > 0 ? '🌶' : idea.likes < 0 ? '💩' : '⭐️'}
+      </h3>
       <section>
         <button onClick={vote('+')}>{'👍'}</button>
         <button onClick={vote('-')}>{'👎'}</button>
