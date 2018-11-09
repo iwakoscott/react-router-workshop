@@ -63,3 +63,17 @@ Learn about `react-router-dom`'s
 2. Build out the `Vote` component to be rendered at `/jams/<unique-id>`.
 3. Use the `getIdea` and `handleVote` API methods to render the idea's `likes` and `title` data, and add the `button` click behavior, respectively.
 4. Add a conditional to handle ideas `id`'s that are not in our backend.
+
+---
+
+### Step 03. Polish up the Application 💅
+
+#### LEARNING GOALS 🥅
+
+- [ ] Learn about the `NavLink` component.
+
+### Instructions
+
+1. Add `activeStyle` to the navigation links so that when clicked the styling of the link changes accordingly.
+2. `.sort` the ideas on the front page in ascending order by number of likes.
+3. Add emojis next to the like number depending on the like count. _For example, if the like count is less than 0 we display a 💩, equal to zero - ⭐️, and greater than zero - 🌶._
