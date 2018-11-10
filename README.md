@@ -84,9 +84,9 @@ Learn about `react-router-dom`'s
 
 #### LEARNING GOALS 🥅
 
-- [ ] Learn about Higher Order Components
-- [ ] Learn about the `Redirect` component
-- [ ] Learn about how to pass state into `Redirect`.
+- [x] Learn about Higher Order Components
+- [x] Learn about the `Redirect` component
+- [x] Learn about how to pass state into `Redirect`.
 
 ### Instructions
 
