@@ -77,3 +77,22 @@ Learn about `react-router-dom`'s
 1. Add `activeStyle` to the navigation links so that when clicked the styling of the link changes accordingly.
 2. `.sort` the ideas on the front page in ascending order by number of likes.
 3. Add emojis next to the like number depending on the like count. _For example, if the like count is less than 0 we display a 💩, equal to zero - ⭐️, and greater than zero - 🌶._
+
+---
+
+### Step 04. BONUS (ADVANCED) Add Private Routing! 🔒
+
+#### LEARNING GOALS 🥅
+
+- [ ] Learn about Higher Order Components
+- [ ] Learn about the `Redirect` component
+- [ ] Learn about how to pass state into `Redirect`.
+
+### Instructions
+
+1. Add a `Login` component that will render a `form` with a dropdown menu of usernames.
+2. Invoke the `auth.setAuthUser` API method inside the `form`'s `onSubmit` handler function.
+3. Add the `auth.unsetAuthUser` API method as the `onClick` handler on the logout button. Additionally, show the `authUser` name somewhere in the `NavBar`.
+4. Build a Higher Order Component called `PrivateRoute` that invokes the `render` callback if the user is authenticated otherwise, return a `Redirect` component to take the user to the login page.
+5. Add the `authUser` to the second argument of `handleAddIdea` inside of the `Add` component's `onSubmit` handler. Display the `author` inside of the `Vote` component.
+6. Pass referrer state into the `Redirect` component rendered by `PrivateRoute` so that after logging into the application the user is redirected to the originally requested page instead of `/`.
