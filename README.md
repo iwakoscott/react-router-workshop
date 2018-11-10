@@ -80,7 +80,7 @@ Learn about `react-router-dom`'s
 
 ---
 
-### Step 04. BONUS (ADVANCED) Add Private Routing! 🔒
+### ✅ Step 04. BONUS (ADVANCED) Add Private Routing! 🔒
 
 #### LEARNING GOALS 🥅
 
