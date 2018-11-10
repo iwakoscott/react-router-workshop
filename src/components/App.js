@@ -1,5 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Route, Link, Switch, NavLink } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Route,
+  Link,
+  Switch,
+  NavLink,
+  Redirect
+} from 'react-router-dom';
 
 function Home(props) {
   const ideas = props.ideas;
@@ -29,7 +36,7 @@ function Add(props) {
     event.preventDefault();
     const input = event.target.elements[0];
     const title = input.value;
-    props.handleAddIdea(title);
+    props.handleAddIdea(title, props.authUser);
     input.value = '';
     props.history.push('/');
   };
@@ -70,6 +77,12 @@ function NavBar(props) {
             Add
           </NavLink>
         </li>
+        {props.authUser !== null ? (
+          <li>
+            Welcome, {props.authUser}!{' '}
+            <button onClick={props.logout}>LOGOUT</button>
+          </li>
+        ) : null}
       </ul>
     </nav>
   );
@@ -96,6 +109,7 @@ function Vote(props) {
       <h3>
         {idea.likes} {idea.likes > 0 ? '🌶' : idea.likes < 0 ? '💩' : '⭐️'}
       </h3>
+      <h6>Added by {idea.author}</h6>
       <section>
         <button onClick={vote('+')}>{'👍'}</button>
         <button onClick={vote('-')}>{'👎'}</button>
@@ -104,29 +118,82 @@ function Vote(props) {
   );
 }
 
-function App({ handleAddIdea, getIdeas, getIdea, handleVote }) {
-  // console.log(getIdeas());
+function Login(props) {
+  const handleSubmit = event => {
+    event.preventDefault();
+    const user = event.target.elements[0].value;
+    props.login(user);
+
+    const { from } = props.location.state || { from: { pathname: '/' } };
+    props.history.push(from.pathname);
+  };
+
+  return (
+    <div>
+      <h1>Please login to use the application!</h1>
+      <form onSubmit={handleSubmit}>
+        <select>
+          <option value="Paddington">Paddington</option>
+          <option value="AuntLucy">AuntLucy</option>
+          <option value="Scott93">Scott93</option>
+        </select>
+        <button>LOGIN</button>
+      </form>
+    </div>
+  );
+}
+
+function PrivateRoute({ to, render, authUser, ...rest }) {
+  const isAuthed = authUser !== null;
+  return (
+    <Route
+      {...rest}
+      render={props =>
+        isAuthed ? (
+          render({ ...props, authUser })
+        ) : (
+          <Redirect
+            to={{
+              pathname: '/login',
+              state: { from: props.location }
+            }}
+          />
+        )
+      }
+    />
+  );
+}
+
+function App({ handleAddIdea, getIdeas, getIdea, handleVote, auth }) {
+  const authUser = auth.getAuthUser();
   return (
     <div>
       <BrowserRouter>
         <div>
-          <NavBar />
+          <NavBar authUser={authUser} logout={auth.unsetAuthUser} />
           <hr />
           <Switch>
-            <Route
+            <PrivateRoute
               exact
+              authUser={authUser}
               path="/"
               render={props => <Home ideas={getIdeas()} {...props} />}
             />
-            <Route
+            <PrivateRoute
+              authUser={authUser}
               path="/add"
               render={props => <Add handleAddIdea={handleAddIdea} {...props} />}
             />
-            <Route
+            <PrivateRoute
+              authUser={authUser}
               path="/jams/:id"
               render={props => (
                 <Vote handleVote={handleVote} getIdea={getIdea} {...props} />
               )}
+            />
+            <Route
+              path="/login"
+              render={props => <Login login={auth.setAuthUser} {...props} />}
             />
             <Route component={Error} />
           </Switch>
