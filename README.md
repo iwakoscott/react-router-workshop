@@ -10,6 +10,8 @@ Follow me on Twitter [@theisomorphic](https://twitter.com/theisomorphic)
 
 ### ✅ Step 00. Setting up our Router and Components to render!
 
+[Open in CodeSandbox 📤](https://bit.ly/2PRkYmG)
+
 #### LEARNING GOALS 🥅
 
 - [x] Download `react-router-dom` as a dependency
@@ -35,6 +37,8 @@ Learn about `react-router-dom`'s
 
 ### ✅ Step 01. Add Dynamic Pages! 🚀
 
+[Open in CodeSandbox 📤](https://bit.ly/2Diy1Hl)
+
 #### LEARNING GOALS 🥅
 
 - [x] Learn about the `render` prop pattern to add more control of what `Route` is rendering.
@@ -52,6 +56,8 @@ Learn about `react-router-dom`'s
 
 ### ✅ Step 02. Add a Jam Idea Voting Page 🎟
 
+[Open in CodeSandbox 📤](https://bit.ly/2AZBAjV)
+
 #### LEARNING GOALS 🥅
 
 - [x] Learn about how to add URL parameters.
@@ -68,6 +74,8 @@ Learn about `react-router-dom`'s
 
 ### ✅ Step 03. Polish up the Application 💅
 
+[Open in CodeSandbox 📤](https://bit.ly/2RMTagB)
+
 #### LEARNING GOALS 🥅
 
 - [x] Learn about the `NavLink` component.
@@ -81,6 +89,8 @@ Learn about `react-router-dom`'s
 ---
 
 ### ✅ Step 04. BONUS (ADVANCED) Add Private Routing! 🔒
+
+[Open in CodeSandbox 📤](https://bit.ly/2zJKccI)
 
 #### LEARNING GOALS 🥅
 
@@ -96,3 +106,6 @@ Learn about `react-router-dom`'s
 4. Build a Higher Order Component called `PrivateRoute` that invokes the `render` callback if the user is authenticated otherwise, return a `Redirect` component to take the user to the login page.
 5. Add the `authUser` to the second argument of `handleAddIdea` inside of the `Add` component's `onSubmit` handler. Display the `author` inside of the `Vote` component.
 6. Pass referrer state into the `Redirect` component rendered by `PrivateRoute` so that after logging into the application the user is redirected to the originally requested page instead of `/`.
+
+### ✅Complete!
+[Open in CodeSandbox 📤](https://bit.ly/2PRlGAm)
