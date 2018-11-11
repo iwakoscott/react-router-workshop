@@ -10,6 +10,8 @@ Follow me on Twitter [@theisomorphic](https://twitter.com/theisomorphic)
 
 ### ✅ Step 00. Setting up our Router and Components to render!
 
+[Open in CodeSandbox 📤](https://bit.ly/2PRkYmG)
+
 #### LEARNING GOALS 🥅
 
 - [x] Download `react-router-dom` as a dependency
