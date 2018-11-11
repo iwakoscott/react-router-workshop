@@ -14,8 +14,6 @@ Follow me on Twitter [@theisomorphic](https://twitter.com/theisomorphic)
 
 #### LEARNING GOALS 🥅
 
-- [ ] Download `react-router-dom` as a dependency
-
 Learn about `react-router-dom`'s
 
 - [ ] `BrowserRouter`
