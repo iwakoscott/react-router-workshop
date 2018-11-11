@@ -37,6 +37,8 @@ Learn about `react-router-dom`'s
 
 ### Step 01. Add Dynamic Pages! 🚀
 
+[Open in CodeSandbox 📤](https://bit.ly/2Diy1Hl)
+
 #### LEARNING GOALS 🥅
 
 - [ ] Learn about the `render` prop pattern to add more control of what `Route` is rendering.
