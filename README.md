@@ -8,6 +8,8 @@ Follow me on Twitter [@theisomorphic](https://twitter.com/theisomorphic)
 
 ---
 
+[Open in CodeSandbox 📤](https://bit.ly/2PRkYmG)
+
 ### ✅ Step 00. Setting up our Router and Components to render!
 
 #### LEARNING GOALS 🥅
@@ -35,6 +37,8 @@ Learn about `react-router-dom`'s
 
 ### ✅ Step 01. Add Dynamic Pages! 🚀
 
+[Open in CodeSandbox 📤](https://bit.ly/2Diy1Hl)
+
 #### LEARNING GOALS 🥅
 
 - [x] Learn about the `render` prop pattern to add more control of what `Route` is rendering.
@@ -49,6 +53,8 @@ Learn about `react-router-dom`'s
 5. Refactor the `Home` component to show the ideas as an ordered list of `Link`s that take the user to the idea's voting page. Add a ternary expression to show a message if no ideas have been added.
 
 ---
+
+[Open in CodeSandbox 📤](https://bit.ly/2AZBAjV)
 
 ### ✅ Step 02. Add a Jam Idea Voting Page 🎟
 
@@ -65,6 +71,8 @@ Learn about `react-router-dom`'s
 4. Add a conditional to handle ideas `id`'s that are not in our backend.
 
 ---
+
+[Open in CodeSandbox 📤](https://bit.ly/2RMTagB)
 
 ### Step 03. Polish up the Application 💅
 
