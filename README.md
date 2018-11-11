@@ -108,4 +108,4 @@ Learn about `react-router-dom`'s
 6. Pass referrer state into the `Redirect` component rendered by `PrivateRoute` so that after logging into the application the user is redirected to the originally requested page instead of `/`.
 
 ### ✅Complete!
-[Open in CodeSandbox 📤](https://bit.ly/2PRlGAm)
+[Open in CodeSandbox 📤](https://bit.ly/2OAspKt)
