@@ -8,9 +8,9 @@ Follow me on Twitter [@theisomorphic](https://twitter.com/theisomorphic)
 
 ---
 
-[Open in CodeSandbox 📤](https://bit.ly/2PRkYmG)
-
 ### ✅ Step 00. Setting up our Router and Components to render!
+
+[Open in CodeSandbox 📤](https://bit.ly/2PRkYmG)
 
 #### LEARNING GOALS 🥅
 
@@ -54,9 +54,9 @@ Learn about `react-router-dom`'s
 
 ---
 
-[Open in CodeSandbox 📤](https://bit.ly/2AZBAjV)
-
 ### ✅ Step 02. Add a Jam Idea Voting Page 🎟
+
+[Open in CodeSandbox 📤](https://bit.ly/2AZBAjV)
 
 #### LEARNING GOALS 🥅
 
@@ -72,9 +72,9 @@ Learn about `react-router-dom`'s
 
 ---
 
-[Open in CodeSandbox 📤](https://bit.ly/2RMTagB)
-
 ### Step 03. Polish up the Application 💅
+
+[Open in CodeSandbox 📤](https://bit.ly/2RMTagB)
 
 #### LEARNING GOALS 🥅
 
