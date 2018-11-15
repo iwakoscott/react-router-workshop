@@ -19,5 +19,4 @@ Follow me on Twitter [@theisomorphic](https://twitter.com/theisomorphic)
 ### Instructions
 
 1. Add `activeStyle` to the navigation links so that when clicked the styling of the link changes accordingly.
-2. `.sort` the ideas on the front page in ascending order by number of likes.
-3. Add emojis next to the like number depending on the like count. _For example, if the like count is less than 0 we display a 💩, equal to zero - ⭐️, and greater than zero - 🌶._
+2. Add emojis next to the like number depending on the like count. _For example, if the like count is less than 0 we display a 💩, equal to zero - ⭐️, and greater than zero - 🌶._
