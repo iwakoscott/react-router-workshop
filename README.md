@@ -30,3 +30,4 @@ Learn about `react-router-dom`'s
 4. Add `NavBar` component.
 5. Build out 404 Error component and try to figure out a `path` for the `Route`
 6. Add `Switch` component to the application.
+7. Improve UX of 404 Error page.
