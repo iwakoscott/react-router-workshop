@@ -3,14 +3,13 @@ import { BrowserRouter, Route, Link, Switch, NavLink } from 'react-router-dom';
 
 function Home(props) {
   const ideas = props.ideas;
-  const byLikes = (a, b) => b.likes - a.likes;
   return (
     <div>
       <h1>The Jam Idea App! {'🐻'}</h1>
       <section>
         {ideas.length > 0 ? (
           <ol>
-            {ideas.sort(byLikes).map(idea => (
+            {ideas.map(idea => (
               <li key={idea.id}>
                 <Link to={'/jams/' + idea.id}>{idea.title}</Link>
               </li>
@@ -30,7 +29,6 @@ function Add(props) {
     const input = event.target.elements[0];
     const title = input.value;
     props.handleAddIdea(title);
-    input.value = '';
     props.history.push('/');
   };
   return (
@@ -88,7 +86,7 @@ function Vote(props) {
     );
   }
 
-  const vote = props.handleVote(id);
+  const addButtonBehavior = props.handleVote(id);
 
   return (
     <div>
@@ -97,15 +95,14 @@ function Vote(props) {
         {idea.likes} {idea.likes > 0 ? '🌶' : idea.likes < 0 ? '💩' : '⭐️'}
       </h3>
       <section>
-        <button onClick={vote('+')}>{'👍'}</button>
-        <button onClick={vote('-')}>{'👎'}</button>
+        <button onClick={addButtonBehavior('+')}>{'👍'}</button>
+        <button onClick={addButtonBehavior('-')}>{'👎'}</button>
       </section>
     </div>
   );
 }
 
 function App({ handleAddIdea, getIdeas, getIdea, handleVote }) {
-  // console.log(getIdeas());
   return (
     <div>
       <BrowserRouter>
@@ -123,7 +120,7 @@ function App({ handleAddIdea, getIdeas, getIdea, handleVote }) {
               render={props => <Add handleAddIdea={handleAddIdea} {...props} />}
             />
             <Route
-              path="/jams/:id"
+              path="/ideas/:id"
               render={props => (
                 <Vote handleVote={handleVote} getIdea={getIdea} {...props} />
               )}
