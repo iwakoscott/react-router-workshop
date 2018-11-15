@@ -103,6 +103,7 @@ function Vote(props) {
 }
 
 function App({ handleAddIdea, getIdeas, getIdea, handleVote }) {
+  const ideas = getIdeas();
   return (
     <div>
       <BrowserRouter>
@@ -113,7 +114,7 @@ function App({ handleAddIdea, getIdeas, getIdea, handleVote }) {
             <Route
               exact
               path="/"
-              render={props => <Home ideas={getIdeas()} {...props} />}
+              render={props => <Home ideas={ideas} {...props} />}
             />
             <Route
               path="/add"
