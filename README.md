@@ -8,7 +8,7 @@ Follow me on Twitter [@theisomorphic](https://twitter.com/theisomorphic)
 
 ---
 
-### Step 00. Setting up our Router and Components to render!
+### ✅ Step 00. Setting up our Router and Components to render!
 
 [Open in CodeSandbox 📤](https://bit.ly/2PRkYmG)
 
@@ -35,7 +35,7 @@ Learn about `react-router-dom`'s
 
 ---
 
-### Step 01. Add Dynamic Pages! 🚀
+### ✅ Step 01. Add Dynamic Pages! 🚀
 
 [Open in CodeSandbox 📤](https://bit.ly/2Diy1Hl)
 
@@ -55,7 +55,7 @@ Learn about `react-router-dom`'s
 
 ---
 
-### Step 02. Add a Jam Idea Voting Page 🎟
+### ✅ Step 02. Add a Jam Idea Voting Page 🎟
 
 [Open in CodeSandbox 📤](https://bit.ly/2AZBAjV)
 
@@ -73,7 +73,7 @@ Learn about `react-router-dom`'s
 
 ---
 
-### Step 03. Polish up the Application 💅
+### ✅ Step 03. Polish up the Application 💅
 
 [Open in CodeSandbox 📤](https://bit.ly/2RMTagB)
 
@@ -88,7 +88,7 @@ Learn about `react-router-dom`'s
 
 ---
 
-### Step 04. BONUS (ADVANCED) Add Private Routing! 🔒
+### ✅ Step 04. BONUS (ADVANCED) Add Private Routing! 🔒
 
 [Open in CodeSandbox 📤](https://bit.ly/2zJKccI)
 
@@ -109,5 +109,5 @@ Learn about `react-router-dom`'s
 
 ---
 
-### ✅Complete!
+### ✅ Complete!
 [Open in CodeSandbox 📤](https://bit.ly/2OAspKt)
