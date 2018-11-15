@@ -29,7 +29,6 @@ function Add(props) {
     const input = event.target.elements[0];
     const title = input.value;
     props.handleAddIdea(title);
-    input.value = '';
     props.history.push('/');
   };
   return (
