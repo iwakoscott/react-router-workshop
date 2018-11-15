@@ -29,7 +29,6 @@ function Add(props) {
     const input = event.target.elements[0];
     const title = input.value;
     props.handleAddIdea(title);
-    input.value = '';
     props.history.push('/');
   };
   return (
@@ -83,22 +82,22 @@ function Vote(props) {
     );
   }
 
-  const vote = props.handleVote(id);
+  const addButtonBehavior = props.handleVote(id);
 
   return (
     <div>
       <h1>{idea.title}</h1>
       <h3>{idea.likes}</h3>
       <section>
-        <button onClick={vote('+')}>{'👍'}</button>
-        <button onClick={vote('-')}>{'👎'}</button>
+        <button onClick={addButtonBehavior('+')}>{'👍'}</button>
+        <button onClick={addButtonBehavior('-')}>{'👎'}</button>
       </section>
     </div>
   );
 }
 
 function App({ handleAddIdea, getIdeas, getIdea, handleVote }) {
-  // console.log(getIdeas());
+  const ideas = getIdeas();
   return (
     <div>
       <BrowserRouter>
@@ -109,7 +108,7 @@ function App({ handleAddIdea, getIdeas, getIdea, handleVote }) {
             <Route
               exact
               path="/"
-              render={props => <Home ideas={getIdeas()} {...props} />}
+              render={props => <Home ideas={ideas} {...props} />}
             />
             <Route
               path="/add"
