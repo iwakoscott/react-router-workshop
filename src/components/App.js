@@ -70,7 +70,6 @@ function NavBar(props) {
 }
 
 function App({ handleAddIdea, getIdeas }) {
-  console.log(getIdeas());
   return (
     <div>
       <BrowserRouter>
