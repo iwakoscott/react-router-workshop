@@ -11,7 +11,7 @@ function Home(props) {
           <ol>
             {ideas.map(idea => (
               <li key={idea.id}>
-                <Link to={'/jams/' + idea.id}>{idea.title}</Link>
+                <Link to={'/ideas/' + idea.id}>{idea.title}</Link>
               </li>
             ))}
           </ol>
