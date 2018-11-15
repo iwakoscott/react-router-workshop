@@ -16,11 +16,11 @@ Follow me on Twitter [@theisomorphic](https://twitter.com/theisomorphic)
 
 Learn about `react-router-dom`'s
 
-- [ ] `BrowserRouter`
-- [ ] `Route`
-- [ ] `Link`
-- [ ] `Switch`
-- [ ] `location` object
+- [x] `BrowserRouter`
+- [x] `Route`
+- [x] `Link`
+- [x] `Switch`
+- [x] `location` object
 
 ### Instructions
 
@@ -41,8 +41,8 @@ Learn about `react-router-dom`'s
 
 #### LEARNING GOALS 🥅
 
-- [ ] Learn about the `render` prop pattern to add more control of what `Route` is rendering.
-- [ ] Learn about the `.push` method on the `history` object.
+- [x] Learn about the `render` prop pattern to add more control of what `Route` is rendering.
+- [x] Learn about the `.push` method on the `history` object.
 
 ### Instructions
 
@@ -61,8 +61,8 @@ Learn about `react-router-dom`'s
 
 #### LEARNING GOALS 🥅
 
-- [ ] Learn about how to add URL parameters.
-- [ ] Learn about the `match` object.
+- [x] Learn about how to add URL parameters.
+- [x] Learn about the `match` object.
 
 ### Instructions
 
@@ -79,7 +79,7 @@ Learn about `react-router-dom`'s
 
 #### LEARNING GOALS 🥅
 
-- [ ] Learn about the `NavLink` component.
+- [x] Learn about the `NavLink` component.
 
 ### Instructions
 
@@ -94,9 +94,9 @@ Learn about `react-router-dom`'s
 
 #### LEARNING GOALS 🥅
 
-- [ ] Learn about Higher Order Components
-- [ ] Learn about the `Redirect` component
-- [ ] Learn about how to pass state into `Redirect`.
+- [x] Learn about Higher Order Components
+- [x] Learn about the `Redirect` component
+- [x] Learn about how to pass state into `Redirect`.
 
 ### Instructions
 
