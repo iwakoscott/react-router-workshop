@@ -70,6 +70,7 @@ function NavBar(props) {
 }
 
 function App({ handleAddIdea, getIdeas }) {
+  const ideas = getIdeas();
   return (
     <div>
       <BrowserRouter>
@@ -80,7 +81,7 @@ function App({ handleAddIdea, getIdeas }) {
             <Route
               exact
               path="/"
-              render={props => <Home ideas={getIdeas()} {...props} />}
+              render={props => <Home ideas={ideas} {...props} />}
             />
             <Route
               path="/add"
