@@ -115,7 +115,7 @@ function App({ handleAddIdea, getIdeas, getIdea, handleVote }) {
               render={props => <Add handleAddIdea={handleAddIdea} {...props} />}
             />
             <Route
-              path="/jams/:id"
+              path="/ideas/:id"
               render={props => (
                 <Vote handleVote={handleVote} getIdea={getIdea} {...props} />
               )}
