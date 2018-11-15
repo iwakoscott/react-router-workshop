@@ -19,7 +19,7 @@ Follow me on Twitter [@theisomorphic](https://twitter.com/theisomorphic)
 
 ### Instructions
 
-1. Add a new `Route` to catch the `/jams/<unique-id>`.
-2. Build out the `Vote` component to be rendered at `/jams/<unique-id>`.
+1. Add a new `Route` to catch the `/ideas/<unique-id>`.
+2. Build out the `Vote` component to be rendered at `/ideas/<unique-id>`.
 3. Use the `getIdea` and `handleVote` API methods to render the idea's `likes` and `title` data, and add the `button` click behavior, respectively.
 4. Add a conditional to handle ideas `id`'s that are not in our backend.
