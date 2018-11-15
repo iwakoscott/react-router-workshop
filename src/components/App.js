@@ -10,16 +10,15 @@ import {
 
 function Home(props) {
   const ideas = props.ideas;
-  const byLikes = (a, b) => b.likes - a.likes;
   return (
     <div>
       <h1>The Jam Idea App! {'🐻'}</h1>
       <section>
         {ideas.length > 0 ? (
           <ol>
-            {ideas.sort(byLikes).map(idea => (
+            {ideas.map(idea => (
               <li key={idea.id}>
-                <Link to={'/jams/' + idea.id}>{idea.title}</Link>
+                <Link to={'/ideas/' + idea.id}>{idea.title}</Link>
               </li>
             ))}
           </ol>
@@ -37,7 +36,6 @@ function Add(props) {
     const input = event.target.elements[0];
     const title = input.value;
     props.handleAddIdea(title, props.authUser);
-    input.value = '';
     props.history.push('/');
   };
   return (
@@ -101,7 +99,7 @@ function Vote(props) {
     );
   }
 
-  const vote = props.handleVote(id);
+  const addButtonBehavior = props.handleVote(id);
 
   return (
     <div>
@@ -111,8 +109,8 @@ function Vote(props) {
       </h3>
       <h6>Added by {idea.author}</h6>
       <section>
-        <button onClick={vote('+')}>{'👍'}</button>
-        <button onClick={vote('-')}>{'👎'}</button>
+        <button onClick={addButtonBehavior('+')}>{'👍'}</button>
+        <button onClick={addButtonBehavior('-')}>{'👎'}</button>
       </section>
     </div>
   );
@@ -166,6 +164,7 @@ function PrivateRoute({ to, render, authUser, ...rest }) {
 
 function App({ handleAddIdea, getIdeas, getIdea, handleVote, auth }) {
   const authUser = auth.getAuthUser();
+  const ideas = getIdeas();
   return (
     <div>
       <BrowserRouter>
@@ -177,7 +176,7 @@ function App({ handleAddIdea, getIdeas, getIdea, handleVote, auth }) {
               exact
               authUser={authUser}
               path="/"
-              render={props => <Home ideas={getIdeas()} {...props} />}
+              render={props => <Home ideas={ideas} {...props} />}
             />
             <PrivateRoute
               authUser={authUser}
@@ -186,7 +185,7 @@ function App({ handleAddIdea, getIdeas, getIdea, handleVote, auth }) {
             />
             <PrivateRoute
               authUser={authUser}
-              path="/jams/:id"
+              path="/ideas/:id"
               render={props => (
                 <Vote handleVote={handleVote} getIdea={getIdea} {...props} />
               )}
