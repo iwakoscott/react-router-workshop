@@ -25,7 +25,10 @@ export default class API extends React.Component {
 
   getAuthUser = () => this.state.authedUser;
 
-  getIdeas = () => this.state.ideas;
+  getIdeas = () => {
+    const _ideas = this.state.ideas;
+    return _ideas.sort((a, b) => b.likes - a.likes);
+  }
 
   getIdea = id => this.state.ideas.find(idea => idea.id === id);
 
