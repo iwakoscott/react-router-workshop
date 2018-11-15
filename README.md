@@ -8,31 +8,6 @@ Follow me on Twitter [@theisomorphic](https://twitter.com/theisomorphic)
 
 ---
 
-### ✅ Step 00. Setting up our Router and Components to render!
-
-[Open in CodeSandbox 📤](https://bit.ly/2PRkYmG)
-
-#### LEARNING GOALS 🥅
-
-Learn about `react-router-dom`'s
-
-- [x] `BrowserRouter`
-- [x] `Route`
-- [x] `Link`
-- [x] `Switch`
-- [x] `location` object
-
-### Instructions
-
-1. Add `react-router-dom` as dependency
-2. Set up `BrowserRouter`
-3. Add first two `Route`'s and build out corresponding components to render.
-4. Add `NavBar` component.
-5. Build out 404 Error component and try to figure out a `path` for the `Route`
-6. Add `Switch` component to the application.
-
----
-
 ### Step 01. Add Dynamic Pages! 🚀
 
 [Open in CodeSandbox 📤](https://bit.ly/2Diy1Hl)
