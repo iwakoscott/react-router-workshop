@@ -24,3 +24,4 @@ Follow me on Twitter [@theisomorphic](https://twitter.com/theisomorphic)
 3. Pass the API method - `handleAddIdea` to the `Add` component using the `render` prop, and invoke it inside the `form`'s `onSubmit` handler.
 4. Use the `history` `.push` method to push the user home after submitting an idea.
 5. Refactor the `Home` component to show the ideas as an ordered list of `Link` components that take the user to the idea's voting page.
+6. Add a ternary expression to render the `ideas` if the `ideas.length > 0` otherwise, display a nice message - "Looks like there are no ideas!"
