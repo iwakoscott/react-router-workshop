@@ -141,7 +141,7 @@ function Login(props) {
   );
 }
 
-function PrivateRoute({ to, render, authUser, ...rest }) {
+function PrivateRoute({ render, authUser, ...rest }) {
   const isAuthed = authUser !== null;
   return (
     <Route
