@@ -21,7 +21,7 @@ Follow me on Twitter [@theisomorphic](https://twitter.com/theisomorphic)
 ### Instructions
 
 1. Add a `Login` component that will render a `form` with a dropdown menu of usernames.
-2. Invoke the `auth.setAuthUser` API method inside the `form`'s `onSubmit` handler function.
+2. Invoke the `auth.setAuthUser` API method and `.push` the user to the homepage inside the `form`'s `onSubmit` handler function.
 3. Add the `auth.unsetAuthUser` API method as the `onClick` handler on the logout button. Additionally, show the `authUser` name somewhere in the `NavBar`.
 4. Build a Higher Order Component called `PrivateRoute` that invokes the `render` callback if the user is authenticated otherwise, return a `Redirect` component to take the user to the login page.
 5. Add the `authUser` to the second argument of `handleAddIdea` inside of the `Add` component's `onSubmit` handler. Display the `author` inside of the `Vote` component.
